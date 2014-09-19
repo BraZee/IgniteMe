@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SecurityQuestiondataSet" targetNamespace="http://tempuri.org/SecurityQuestiondataSet.xsd" xmlns:mstns="http://tempuri.org/SecurityQuestiondataSet.xsd" xmlns="http://tempuri.org/SecurityQuestiondataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SecurityQuestiondataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SecurityQuestiondataSet" msprop:Generator_UserDSName="SecurityQuestiondataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SecurityQuestion" msprop:Generator_TableClassName="SecurityQuestionDataTable" msprop:Generator_TableVarName="tableSecurityQuestion" msprop:Generator_TablePropName="SecurityQuestion" msprop:Generator_RowDeletingName="SecurityQuestionRowDeleting" msprop:Generator_RowChangingName="SecurityQuestionRowChanging" msprop:Generator_RowEvHandlerName="SecurityQuestionRowChangeEventHandler" msprop:Generator_RowDeletedName="SecurityQuestionRowDeleted" msprop:Generator_UserTableName="SecurityQuestion" msprop:Generator_RowChangedName="SecurityQuestionRowChanged" msprop:Generator_RowEvArgName="SecurityQuestionRowChangeEvent" msprop:Generator_RowClassName="SecurityQuestionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SecurityQuestionId" msprop:Generator_ColumnVarNameInTable="columnSecurityQuestionId" msprop:Generator_ColumnPropNameInRow="SecurityQuestionId" msprop:Generator_ColumnPropNameInTable="SecurityQuestionIdColumn" msprop:Generator_UserColumnName="SecurityQuestionId" type="xs:int" minOccurs="0" />
+              <xs:element name="SecurityQuestionName" msprop:Generator_ColumnVarNameInTable="columnSecurityQuestionName" msprop:Generator_ColumnPropNameInRow="SecurityQuestionName" msprop:Generator_ColumnPropNameInTable="SecurityQuestionNameColumn" msprop:Generator_UserColumnName="SecurityQuestionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

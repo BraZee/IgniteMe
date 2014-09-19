@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="Ignite.SiteNew" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - IGNITE</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/dashboard.css" rel="stylesheet" />
+    <link href="Content/toastr.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <link href="Content/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-default navbar-fixed-top" style="background-color: #f0f0f0" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a style="color: red" class="navbar-brand btn btn-link" href="#"><i class="fa fa-fire"></i>IGNITE!</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <asp:LinkButton runat="server" ID="btnUserProfileSecurity" Visible="False" OnClick="btnUserProfileSecurity_OnClick" Text="Profile Security"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="btnUserProfileDetails" Visible="False" OnClick="btnUserProfileDetails_OnClick" Text="Profile Details"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnLogout" Visible="False" runat="server" OnClick="btnLogout_OnClick" ><i class="fa fa-power-off"></i>   Sign Out</asp:LinkButton>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        </div>
+    </form>
+    <script src="<%: ResolveUrl("~/Scripts/jquery-1.9.1.min.js") %>"></script>
+    <script src="<%: ResolveUrl("~/Scripts/toastr.min.js") %>"></script>
+    <script src="<%: ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
+    <script src="<%: ResolveUrl("~/Scripts/myScript.js") %>"></script>
+
+    <asp:Label ID="LblJsHelper" runat="server" Text=""></asp:Label>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SiteChild.master.cs" Inherits="Ignite.SiteChild" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="row">
+        <div class="col-xs-2 col-sm-2" id="sidebar-left">
+            <ul class="nav main-menu" runat="server" id="MenuS">
+                <li runat="server"></li>
+                <li class="dropdown" runat="server" visible="False" id="EventsMenu">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="hidden-xs">Events</span>
+                    </a>
+                    <ul runat="server" class="dropdown-menu">
+                        <li>
+                            <asp:LinkButton runat="server" Visible="False" ID="btnManageEvents" OnClick="btnManageEvents_Click"><i class="fa fa-glass"></i>  Manage Events</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton runat="server" Visible="False" ID="btnViewEventReports" OnClick="btnManageEvents_Click"><i class="glyphicon glyphicon-folder-open"></i>  View Event Reports</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="btnManageFeedback" runat="server" Visible="False"><i class="fa fa-comments-o"></i>  Manage Feedback</asp:LinkButton></li>
+                    </ul>
+                </li>
+                <li class="dropdown" runat="server" visible="False" id="OrganisationMenu">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa fa-building-o"></i>
+                        <span class="hidden-xs">Organisations</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <asp:LinkButton ID="btnManageLocations" OnClick="btnManageLocations_Click" runat="server" Visible="False"><i class="fa fa-location-arrow"></i>  Manage Locations</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="btnManageCurrencies" Visible="False" runat="server" OnClick="btnManageCurrencies_OnClick"><i class="fa fa-money"></i>  Manage Currencies</asp:LinkButton></li>
+                    </ul>
+                </li>
+                <li class="dropdown" runat="server" visible="False" id="MessagingMenu">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa fa-pencil-square-o"></i>
+                        <span class="hidden-xs">Messaging</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <asp:LinkButton runat="server" Visible="False" ID="btnPushSMS" OnClick="btnPushSMS_OnClick"><i class="fa fa-send"></i>    Push SMS</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="btnPushEmail" Visible="False" runat="server" OnClick="btnPushEmail_OnClick"><i class="glyphicon glyphicon-envelope"></i>  Push Email</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="btnPushSocialMedia" Visible="False" runat="server"><i class="fa fa-twitter-square"></i>  Push Social Media Message</asp:LinkButton></li>
+                    </ul>
+                </li>
+                <li class="dropdown" runat="server" visible="False" id="UserManagementMenu">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa fa-desktop"></i>
+                        <span class="hidden-xs">User Management</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <asp:LinkButton runat="server" ID="btnManageUsers" Visible="False" OnClick="btnManageAdminUsers_Click"><i class="glyphicon glyphicon-user"></i>  Users Setup</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="btnManageUserGroups" Visible="False" OnClick="btnManageUserGroups_OnClick"><i class="fa fa-group"></i>  User Groups Setup</asp:LinkButton></li>
+                    </ul>
+                </li>
+                <li class="dropdown" runat="server" visible="False" id="AdminMenu">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa fa-desktop"></i>
+                        <span class="hidden-xs">Admin Menu</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <asp:LinkButton runat="server" ID="btnManageCategories" Visible="False" OnClick="btnManageCategories_Click"><i class="fa fa-user"></i>  Manage Categories</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="btnManageInterests" Visible="False" OnClick="btnManageInterests_OnClick"><i class="fa fa-check"></i>  Manage Interests</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="btnManageOrganisations" Visible="False" OnClick="btnManageOrganisations_Click"><i class="fa fa-building-o"></i>  Manage Organisations</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="btnManageFinancials" Visible="False" runat="server"><i class="fa fa-money"></i>  Manage Financials</asp:LinkButton></li>
+                    </ul>
+                </li>
+                <li runat="server" id="checker"></li>
+            </ul>
+        </div>
+        <!--Start Content-->
+        <div id="content" class="col-xs-12 col-sm-10">
+            <asp:ContentPlaceHolder runat="server" ID="NestedContent"></asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p class="text-center bottom">&copy; <%: DateTime.Now.Year %> - Powered by theSOFTtribe</p>
+            </footer>
+        </div>
+        <!--End Content-->
+    </div>
+</asp:Content>

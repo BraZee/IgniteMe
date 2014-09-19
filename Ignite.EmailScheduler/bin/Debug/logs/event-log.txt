@@ -1,0 +1,41 @@
+2014-09-08 12:28:08,024 [9] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-08 12:28:08,057 [9] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-08 12:29:03,558 [10] callback_server INFO  - 4 emails to send
+2014-09-08 12:30:52,474 [10] callback_server DEBUG - Processing Email to 'oddoyedavid@gmail.com' 
+2014-09-08 12:31:01,896 [10] callback_server DEBUG - Email to 'oddoyedavid@gmail.com' sent.
+2014-09-08 12:31:27,669 [10] callback_server DEBUG - Processing Email to 'oddoyedavid@gmail.com' 
+2014-09-08 12:31:29,514 [10] callback_server DEBUG - Email to 'oddoyedavid@gmail.com' sent.
+2014-09-08 12:31:39,590 [10] callback_server DEBUG - Processing Email to 'oddoyedavid@gmail.com' 
+2014-09-08 12:31:46,271 [10] callback_server DEBUG - Email to 'oddoyedavid@gmail.com' sent.
+2014-09-08 12:32:07,559 [10] callback_server DEBUG - Processing Email to 'd.oddoye@mail.com' 
+2014-09-08 12:32:07,593 [10] callback_server DEBUG - Email to 'd.oddoye@mail.com' sent.
+2014-09-08 12:32:07,594 [10] callback_server INFO  - Processing Emails completed 
+
+2014-09-08 12:38:19,999 [9] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-08 12:38:20,011 [9] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-08 12:38:28,722 [10] callback_server INFO  - 1 emails to send
+2014-09-08 12:39:16,709 [10] callback_server INFO  - Processing Emails completed 
+
+2014-09-08 12:40:58,340 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-08 12:40:58,353 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-08 12:40:58,408 [3] callback_server INFO  - 1 emails to send
+2014-09-08 12:40:58,419 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-08 12:41:00,435 [1] callback_server DEBUG - Ignite Scheduled Email Creator : stopping...
+2014-09-08 12:41:00,514 [3] callback_server ERROR - Thread was being aborted.
+2014-09-08 12:44:12,956 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-08 12:44:12,970 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-08 12:44:13,029 [3] callback_server INFO  - 1 emails to send
+2014-09-08 12:44:13,040 [3] callback_server DEBUG - Processing Email to 'd.oddoye@mail.com' 
+2014-09-08 12:44:13,052 [3] callback_server DEBUG - Email to 'd.oddoye@mail.com' sent.
+2014-09-08 12:44:13,053 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-08 12:45:54,909 [10] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-08 12:45:54,930 [10] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-08 12:46:06,007 [11] callback_server INFO  - 1 emails to send
+2014-09-08 12:46:31,483 [11] callback_server DEBUG - Processing Email to 'd.oddoye@mail.com' 
+2014-09-08 12:46:46,899 [11] callback_server DEBUG - Email to 'd.oddoye@mail.com' sent.
+2014-09-08 12:46:55,524 [11] callback_server INFO  - Processing Emails completed 
+
+2014-09-08 13:20:12,996 [9] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-08 13:20:13,015 [9] callback_server DEBUG - Ignite Scheduled Email Creator : started

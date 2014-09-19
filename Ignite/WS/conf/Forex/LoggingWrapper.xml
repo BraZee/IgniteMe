@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConfigManager SYSTEM "cm.dtd">
+
+<ConfigManager>
+  <namespace name="Custom.LoggingWrapper">
+    <property name="logger_class">
+      <!--<value>Custom.LoggingWrapper.DiagnosticImpl</value>-->
+      <value>Custom.LoggingWrapper.Log4NETImpl</value>
+    </property>
+    <property name="logger_name">
+      <value>generic</value>
+    </property>
+    <property name="LogName">
+      <value>Test Log</value>
+    </property>
+    <property name="Source">
+      <value>Test Log</value>
+    </property>
+    <property name="config_file">
+      <value>C:\inetpub\conf\SLedger\log4net.config</value>
+    </property>
+  </namespace>
+
+  <namespace name="SLedger.Web.Services.SecurityManager">
+    <property name="logger_class">
+      <value>Custom.LoggingWrapper.Log4NETImpl</value>
+    </property>
+    <property name="logger_name">
+      <value>SecurityManager</value>
+    </property>
+    <property name="LogName">
+      <value>Test Log</value>
+    </property>
+    <property name="Source">
+      <value>Test Log</value>
+    </property>
+    <property name="config_file">
+      <value>C:\inetpub\conf\SLedger\log4net.config</value>
+    </property>
+  </namespace>
+
+  <namespace name="SLedger.Web.Services.UsersManager">
+    <property name="logger_class">
+      <value>Custom.LoggingWrapper.Log4NETImpl</value>
+    </property>
+    <property name="logger_name">
+      <value>UsersManager</value>
+    </property>
+    <property name="LogName">
+      <value>Test Log</value>
+    </property>
+    <property name="Source">
+      <value>Test Log</value>
+    </property>
+    <property name="config_file">
+      <value>C:\inetpub\conf\SLedger\log4net.config</value>
+    </property>
+  </namespace>
+
+  <namespace name="SLedger.Web.Services.ParametersManager">
+    <property name="logger_class">
+      <value>Custom.LoggingWrapper.Log4NETImpl</value>
+    </property>
+    <property name="logger_name">
+      <value>ParametersManager</value>
+    </property>
+    <property name="LogName">
+      <value>Test Log</value>
+    </property>
+    <property name="Source">
+      <value>Test Log</value>
+    </property>
+    <property name="config_file">
+      <value>C:\inetpub\conf\SLedger\log4net.config</value>
+    </property>
+  </namespace>
+
+  <namespace name="SLedger.Web.Services.TransManager">
+    <property name="logger_class">
+      <value>Custom.LoggingWrapper.Log4NETImpl</value>
+    </property>
+    <property name="logger_name">
+      <value>PolicyTransManager</value>
+    </property>
+    <property name="LogName">
+      <value>Test Log</value>
+    </property>
+    <property name="Source">
+      <value>Test Log</value>
+    </property>
+    <property name="config_file">
+      <value>C:\inetpub\conf\SLedger\log4net.config</value>
+    </property>
+  </namespace>
+</ConfigManager>

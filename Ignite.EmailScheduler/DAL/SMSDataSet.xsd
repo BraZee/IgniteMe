@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SMSDataSet" targetNamespace="http://tempuri.org/SMSDataSet.xsd" xmlns:mstns="http://tempuri.org/SMSDataSet.xsd" xmlns="http://tempuri.org/SMSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="IgniteDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="IgniteDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Ignite.EmailScheduler.Properties.Settings.GlobalReference.Default.IgniteDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SMSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SMSDataSet" msprop:Generator_UserDSName="SMSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SMS" msprop:Generator_TableClassName="SMSDataTable" msprop:Generator_TableVarName="tableSMS" msprop:Generator_RowChangedName="SMSRowChanged" msprop:Generator_TablePropName="SMS" msprop:Generator_RowDeletingName="SMSRowDeleting" msprop:Generator_RowChangingName="SMSRowChanging" msprop:Generator_RowEvHandlerName="SMSRowChangeEventHandler" msprop:Generator_RowDeletedName="SMSRowDeleted" msprop:Generator_RowClassName="SMSRow" msprop:Generator_UserTableName="SMS" msprop:Generator_RowEvArgName="SMSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="EventId" msdata:Caption="event_id" msprop:Generator_ColumnVarNameInTable="columnEventId" msprop:Generator_ColumnPropNameInRow="EventId" msprop:Generator_ColumnPropNameInTable="EventIdColumn" msprop:Generator_UserColumnName="EventId" type="xs:int" minOccurs="0" />
+              <xs:element name="SMS" msdata:Caption="sms" msprop:Generator_ColumnVarNameInTable="columnSMS" msprop:Generator_ColumnPropNameInRow="SMS" msprop:Generator_ColumnPropNameInTable="SMSColumn" msprop:Generator_UserColumnName="SMS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="227" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SMSName" msdata:Caption="sms_name" msprop:Generator_ColumnVarNameInTable="columnSMSName" msprop:Generator_ColumnPropNameInRow="SMSName" msprop:Generator_ColumnPropNameInTable="SMSNameColumn" msprop:Generator_UserColumnName="SMSName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BeginDate" msdata:Caption="send_date" msprop:Generator_ColumnVarNameInTable="columnBeginDate" msprop:Generator_ColumnPropNameInRow="BeginDate" msprop:Generator_ColumnPropNameInTable="BeginDateColumn" msprop:Generator_UserColumnName="BeginDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="isUser" msprop:Generator_ColumnVarNameInTable="columnisUser" msprop:Generator_ColumnPropNameInRow="isUser" msprop:Generator_ColumnPropNameInTable="isUserColumn" msprop:Generator_UserColumnName="isUser" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Location" msdata:Caption="processed" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="EndDate" msdata:Caption="msg_type" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Event" msprop:Generator_ColumnVarNameInTable="columnEvent" msprop:Generator_ColumnPropNameInRow="Event" msprop:Generator_ColumnPropNameInTable="EventColumn" msprop:Generator_UserColumnName="Event" type="xs:string" minOccurs="0" />
+              <xs:element name="BeginTime" msprop:Generator_ColumnVarNameInTable="columnBeginTime" msprop:Generator_ColumnPropNameInRow="BeginTime" msprop:Generator_ColumnPropNameInTable="BeginTimeColumn" msprop:Generator_UserColumnName="BeginTime" type="xs:duration" minOccurs="0" />
+              <xs:element name="EndTime" msprop:Generator_ColumnVarNameInTable="columnEndTime" msprop:Generator_ColumnPropNameInRow="EndTime" msprop:Generator_ColumnPropNameInTable="EndTimeColumn" msprop:Generator_UserColumnName="EndTime" type="xs:duration" minOccurs="0" />
+              <xs:element name="Organisation" msprop:Generator_ColumnVarNameInTable="columnOrganisation" msprop:Generator_ColumnPropNameInRow="Organisation" msprop:Generator_ColumnPropNameInTable="OrganisationColumn" msprop:Generator_UserColumnName="Organisation" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

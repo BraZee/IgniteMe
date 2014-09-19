@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:40869/WS/SecurityManager.asmx?disco" filename="SecurityManager.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:40869/WS/SecurityManager.asmx?wsdl" filename="SecurityManager.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:40869/WS/SecurityManager.asmx?schema=OperationDataSet" filename="OperationDataSet.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

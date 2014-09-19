@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigManager>
+  <!-- Example default configuration using DiagnosticImpl -->
+  <namespace name="Custom.LoggingWrapper.LogManager">
+    <!-- the full classname of the Logger subclass, required -->
+	    <property name="logger_class">
+	        <value>Custom.LoggingWrapper.Log4NETImpl</value>
+	    </property>
+	    <property name="LogName">
+	        <value>callback_server</value>
+	    </property>
+		<!-- When running as a Service, paths must take into account the fact that the running directory is the system32 directory -->
+	    <property name="config_file">
+	        <value>log4net.config</value>
+	    </property>
+
+    <!-- log name of Logger, required -->
+    <property name="logger_name">
+      <Value>callback_server</Value>
+    </property>
+
+    <!-- default log level, optional -->
+    <property name="default_level">
+      <Value>DEBUG</Value>
+    </property>
+
+    <!-- source for the EventLog, required -->
+    <property name="source">
+      <Value>callback_server</Value>
+    </property>
+  </namespace>
+
+</ConfigManager>

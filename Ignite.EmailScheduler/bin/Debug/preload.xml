@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConfigManager SYSTEM "cm.dtd">
+
+<ConfigManager>
+	<namespace name="Custom.Util.ConfigurationManager">
+		<!-- When running as a Service, paths must take into account the fact that the running directory is the system32 directory -->
+		<property name="preload">
+			<value>LoggingWrapper.xml</value>	
+		</property>
+  	</namespace>
+</ConfigManager>

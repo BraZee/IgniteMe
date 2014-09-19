@@ -1,0 +1,10 @@
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\obj\Debug\Ignite.EmailScheduler.csprojResolveAssemblyReference.cache
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\bin\Debug\Ignite.EmailScheduler.exe.config
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\bin\Debug\Ignite.EmailScheduler.exe
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\bin\Debug\Ignite.EmailScheduler.pdb
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\bin\Debug\log4net.dll
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\bin\Debug\LoggingWrapper.dll
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\obj\Debug\Ignite.EmailScheduler.exe
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\obj\Debug\Ignite.EmailScheduler.pdb
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\bin\Debug\ConfigurationManager.dll
+C:\Users\Bra_Zee\Documents\Visual Studio 2012\Projects\Ignite\Ignite.EmailScheduler\bin\Debug\LoggingWrapper.xml

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EmailDataSet" targetNamespace="http://tempuri.org/EmailDataSet.xsd" xmlns:mstns="http://tempuri.org/EmailDataSet.xsd" xmlns="http://tempuri.org/EmailDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EmailDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EmailDataSet" msprop:Generator_UserDSName="EmailDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Email" msprop:Generator_TableClassName="EmailDataTable" msprop:Generator_TableVarName="tableEmail" msprop:Generator_TablePropName="Email" msprop:Generator_RowDeletingName="EmailRowDeleting" msprop:Generator_RowChangingName="EmailRowChanging" msprop:Generator_RowEvHandlerName="EmailRowChangeEventHandler" msprop:Generator_RowDeletedName="EmailRowDeleted" msprop:Generator_UserTableName="Email" msprop:Generator_RowChangedName="EmailRowChanged" msprop:Generator_RowEvArgName="EmailRowChangeEvent" msprop:Generator_RowClassName="EmailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="EventId" msdata:Caption="event_id" msprop:Generator_ColumnVarNameInTable="columnEventId" msprop:Generator_ColumnPropNameInRow="EventId" msprop:Generator_ColumnPropNameInTable="EventIdColumn" msprop:Generator_UserColumnName="EventId" type="xs:int" minOccurs="0" />
+              <xs:element name="SendDate" msdata:Caption="send_date" msprop:Generator_ColumnVarNameInTable="columnSendDate" msprop:Generator_ColumnPropNameInRow="SendDate" msprop:Generator_ColumnPropNameInTable="SendDateColumn" msprop:Generator_UserColumnName="SendDate" type="xs:dateTime" />
+              <xs:element name="Subject" msdata:Caption="subject" msprop:Generator_ColumnVarNameInTable="columnSubject" msprop:Generator_ColumnPropNameInRow="Subject" msprop:Generator_ColumnPropNameInTable="SubjectColumn" msprop:Generator_UserColumnName="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Body" msdata:Caption="body" msprop:Generator_ColumnVarNameInTable="columnBody" msprop:Generator_ColumnPropNameInRow="Body" msprop:Generator_ColumnPropNameInTable="BodyColumn" msprop:Generator_UserColumnName="Body" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isUser" msprop:Generator_ColumnVarNameInTable="columnisUser" msprop:Generator_ColumnPropNameInRow="isUser" msprop:Generator_ColumnPropNameInTable="isUserColumn" msprop:Generator_UserColumnName="isUser" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Processed" msdata:Caption="processed" msprop:Generator_ColumnVarNameInTable="columnProcessed" msprop:Generator_ColumnPropNameInRow="Processed" msprop:Generator_ColumnPropNameInTable="ProcessedColumn" msprop:Generator_UserColumnName="Processed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MessageType" msdata:Caption="msg_type" msprop:Generator_ColumnVarNameInTable="columnMessageType" msprop:Generator_ColumnPropNameInRow="MessageType" msprop:Generator_ColumnPropNameInTable="MessageTypeColumn" msprop:Generator_UserColumnName="MessageType" type="xs:int" minOccurs="0" />
+              <xs:element name="Event" msprop:Generator_ColumnVarNameInTable="columnEvent" msprop:Generator_ColumnPropNameInRow="Event" msprop:Generator_ColumnPropNameInTable="EventColumn" msprop:Generator_UserColumnName="Event" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

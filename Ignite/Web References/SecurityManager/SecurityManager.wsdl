@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://thesofttribe.com/platform/slegder/services" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://thesofttribe.com/platform/slegder/services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This service handles all operations asscoiated with access and access rights in the system</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://thesofttribe.com/platform/slegder/services">
+      <s:import namespace="http://thesofttribe.com/platform/sledger/OperationDataSet.xsd" />
+      <s:import schemaLocation="http://localhost:40869/WS/SecurityManager.asmx?schema=OperationDataSet" namespace="http://thesofttribe.com/platform/sledger/OperationDataSet.xsd" />
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orgId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="logon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult" type="tns:AuthResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtraMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="tns:LoginReturn" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserToken" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFullName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="LoginReturn">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="ExpiredCredentials" />
+          <s:enumeration value="WrongCredentials" />
+          <s:enumeration value="InvalidContext" />
+          <s:enumeration value="InactiveUser" />
+          <s:enumeration value="DeletedUser" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Logout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ResetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="securityQuestionId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityAnswer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orgId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ResetPasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDataEntryTracking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entityName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parameterId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDataEntryTrackingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDataEntryTrackingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="securityQuestionId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityAnswer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateUserPasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedActions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userToken" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userGroupId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedActionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizedActionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://thesofttribe.com/platform/sledger/OperationDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDataEntryTrackingSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDataEntryTracking" />
+  </wsdl:message>
+  <wsdl:message name="AddDataEntryTrackingSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDataEntryTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedActionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedActions" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedActionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedActionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SecurityManagerSoap">
+    <wsdl:operation name="Authenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method authenticates the login credentials passed</wsdl:documentation>
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method logout the user form the system. It changes the status of the user in the system</wsdl:documentation>
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method attempts to reset the status of the specified user. The password as well as the security question and answer and user status are reset</wsdl:documentation>
+      <wsdl:input message="tns:ResetPasswordSoapIn" />
+      <wsdl:output message="tns:ResetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDataEntryTracking">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates a data tracking entry and saves it in the database</wsdl:documentation>
+      <wsdl:input message="tns:AddDataEntryTrackingSoapIn" />
+      <wsdl:output message="tns:AddDataEntryTrackingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserPassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method attempts to set the status of the specified user. The password as well as the security question and answer and user status are set</wsdl:documentation>
+      <wsdl:input message="tns:CreateUserPasswordSoapIn" />
+      <wsdl:output message="tns:CreateUserPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedActions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method returns the list of authorised rights the user with the userId provided has</wsdl:documentation>
+      <wsdl:input message="tns:GetAuthorizedActionsSoapIn" />
+      <wsdl:output message="tns:GetAuthorizedActionsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SecurityManagerSoap" type="tns:SecurityManagerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://thesofttribe.com/platform/slegder/services/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://thesofttribe.com/platform/slegder/services/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://thesofttribe.com/platform/slegder/services/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDataEntryTracking">
+      <soap:operation soapAction="http://thesofttribe.com/platform/slegder/services/AddDataEntryTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserPassword">
+      <soap:operation soapAction="http://thesofttribe.com/platform/slegder/services/CreateUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedActions">
+      <soap:operation soapAction="http://thesofttribe.com/platform/slegder/services/GetAuthorizedActions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SecurityManagerSoap12" type="tns:SecurityManagerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://thesofttribe.com/platform/slegder/services/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://thesofttribe.com/platform/slegder/services/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap12:operation soapAction="http://thesofttribe.com/platform/slegder/services/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDataEntryTracking">
+      <soap12:operation soapAction="http://thesofttribe.com/platform/slegder/services/AddDataEntryTracking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserPassword">
+      <soap12:operation soapAction="http://thesofttribe.com/platform/slegder/services/CreateUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedActions">
+      <soap12:operation soapAction="http://thesofttribe.com/platform/slegder/services/GetAuthorizedActions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecurityManager">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This service handles all operations asscoiated with access and access rights in the system</wsdl:documentation>
+    <wsdl:port name="SecurityManagerSoap" binding="tns:SecurityManagerSoap">
+      <soap:address location="http://localhost:40869/WS/SecurityManager.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SecurityManagerSoap12" binding="tns:SecurityManagerSoap12">
+      <soap12:address location="http://localhost:40869/WS/SecurityManager.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

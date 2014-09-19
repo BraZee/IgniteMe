@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ignite.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%:Page.Title %> - IGNITE</title>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/Content/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="/Content/toastr.min.css" rel="stylesheet" />
+    <link href="/Content/style.min.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background: white">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="True" EnablePageMethods="true">
+            <Scripts>
+                <asp:ScriptReference Name="jquery"/>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!--Start Header-->
+        <header class="navbar">
+            <div class="container-fluid expanded-panel">
+                <div class="row">
+                    <div id="logo" class="col-xs-12 col-sm-2">
+                        <a style="color: red" href="/LandingPage.aspx" runat="server" id="btnIgnite" onserverclick="btnIgnite_OnServerClick"><i class="fa fa-fire"></i>IGNITE!</a>
+                    </div>
+                    <div id="top-panel" class="col-xs-12 col-sm-10">
+                        <div class="row">
+                            <div runat="server" id="btnShowSidebar" visible="False" class="col-xs-8 col-sm-4">
+                                <a href="#" class="show-sidebar">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </div>
+                            <div runat="server" id="divLogin" visible="False" class="col-xs-4 col-sm-8 top-panel-right">
+                                <ul class="nav navbar-nav pull-right panel-menu">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+                                            <div class="avatar">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <i class="fa fa-angle-down pull-right"></i>
+                                            <div class="user-mini pull-right">
+                                                <span class="welcome">Welcome,</span>
+                                                <span>
+                                                    <asp:Label runat="server" ID="lblUserFullName" Text="User"></asp:Label></span>
+                                            </div>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <asp:LinkButton runat="server" ID="btnProfileDetails" OnClick="btnUserProfileDetails_OnClick">
+											<i class="fa fa-user"></i>
+											<span>Profile Details</span>
+                                                </asp:LinkButton>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton runat="server" ID="btnUserProfileSecurity" OnClick="btnUserProfileSecurity_OnClick">
+											<i class="fa fa-envelope"></i>
+											<span>Security Details</span>
+                                                </asp:LinkButton>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton runat="server" ID="btnLogout" OnClick="btnLogout_OnClick">
+											<i class="fa fa-power-off"></i>
+											<span>Logout</span>
+                                                </asp:LinkButton>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--End Header-->
+        <!--Start Container-->
+
+        <div id="main" class="container-fluid">
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <!--End Container-->
+    </form>
+
+    
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <script src="/Scripts/devoops.min.js"></script>
+
+    <asp:Label ID="LblJsHelper" runat="server" Text=""></asp:Label>
+</body>
+</html>

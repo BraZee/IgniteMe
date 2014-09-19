@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConfigManager SYSTEM "cm.dtd">
+
+<ConfigManager>
+	<namespace name="Custom.Util.ConfigurationManager">
+		<property name="preload">
+			<value>C:\inetpub\conf\SLedger\LoggingWrapper.xml</value> <!-- Configures the Logging Wrapper -->
+		</property>
+  </namespace>
+</ConfigManager>

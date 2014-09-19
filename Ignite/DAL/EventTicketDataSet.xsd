@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EventTicketDataSet" targetNamespace="http://thesofttribe.com/platform/eventmanager/EventTicketDataSet.xsd" xmlns:mstns="http://thesofttribe.com/platform/eventmanager/EventTicketDataSet.xsd" xmlns="http://thesofttribe.com/platform/eventmanager/EventTicketDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EventTicketDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EventTicketDataSet" msprop:Generator_UserDSName="EventTicketDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EventTicket" msprop:Generator_UserTableName="EventTicket" msprop:Generator_RowEvArgName="EventTicketRowChangeEvent" msprop:Generator_TableVarName="tableEventTicket" msprop:Generator_TablePropName="EventTicket" msprop:Generator_RowDeletingName="EventTicketRowDeleting" msprop:Generator_RowChangingName="EventTicketRowChanging" msprop:Generator_RowDeletedName="EventTicketRowDeleted" msprop:Generator_RowEvHandlerName="EventTicketRowChangeEventHandler" msprop:Generator_TableClassName="EventTicketDataTable" msprop:Generator_RowChangedName="EventTicketRowChanged" msprop:Generator_RowClassName="EventTicketRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CurrencyId" msprop:Generator_ColumnVarNameInTable="columnCurrencyId" msprop:Generator_ColumnPropNameInRow="CurrencyId" msprop:Generator_ColumnPropNameInTable="CurrencyIdColumn" msprop:Generator_UserColumnName="CurrencyId" type="xs:int" minOccurs="0" />
+              <xs:element name="EventId" msprop:Generator_ColumnVarNameInTable="columnEventId" msprop:Generator_ColumnPropNameInRow="EventId" msprop:Generator_ColumnPropNameInTable="EventIdColumn" msprop:Generator_UserColumnName="EventId" type="xs:int" minOccurs="0" />
+              <xs:element name="EventName" msprop:Generator_ColumnVarNameInTable="columnEventName" msprop:Generator_ColumnPropNameInRow="EventName" msprop:Generator_ColumnPropNameInTable="EventNameColumn" msprop:Generator_UserColumnName="EventName" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxEntries" msprop:Generator_ColumnVarNameInTable="columnMaxEntries" msprop:Generator_ColumnPropNameInRow="MaxEntries" msprop:Generator_ColumnPropNameInTable="MaxEntriesColumn" msprop:Generator_UserColumnName="MaxEntries" type="xs:int" minOccurs="0" />
+              <xs:element name="NumDays" msprop:Generator_ColumnVarNameInTable="columnNumDays" msprop:Generator_ColumnPropNameInRow="NumDays" msprop:Generator_ColumnPropNameInTable="NumDaysColumn" msprop:Generator_UserColumnName="NumDays" type="xs:int" minOccurs="0" />
+              <xs:element name="Duplicates" msprop:Generator_ColumnVarNameInTable="columnDuplicates" msprop:Generator_ColumnPropNameInRow="Duplicates" msprop:Generator_ColumnPropNameInTable="DuplicatesColumn" msprop:Generator_UserColumnName="Duplicates" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Active" msprop:Generator_ColumnVarNameInTable="columnActive" msprop:Generator_ColumnPropNameInRow="Active" msprop:Generator_ColumnPropNameInTable="ActiveColumn" msprop:Generator_UserColumnName="Active" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Currency" msprop:Generator_ColumnVarNameInTable="columnCurrency" msprop:Generator_ColumnPropNameInRow="Currency" msprop:Generator_ColumnPropNameInTable="CurrencyColumn" msprop:Generator_UserColumnName="Currency" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxSession" msprop:Generator_ColumnVarNameInTable="columnMaxSession" msprop:Generator_ColumnPropNameInRow="MaxSession" msprop:Generator_ColumnPropNameInTable="MaxSessionColumn" msprop:Generator_UserColumnName="MaxSession" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EventTicket" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

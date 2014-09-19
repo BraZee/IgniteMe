@@ -1,0 +1,77 @@
+2014-09-03 17:30:46,480 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:30:46,494 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:31:21,547 [1] callback_server DEBUG - Ignite Scheduled Email Creator : stopping...
+2014-09-03 17:31:21,590 [3] callback_server ERROR - Thread was being aborted.
+2014-09-03 17:31:49,433 [9] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:31:49,446 [9] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:32:13,760 [10] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:32:13,773 [10] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:33:15,039 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:33:15,054 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:33:15,102 [3] callback_server INFO  - 3 emails to send
+2014-09-03 17:33:15,120 [3] callback_server ERROR - Procedure or function 'spAddEmailOut' expects parameter '@e_datetime', which was not supplied.
+2014-09-03 17:33:15,120 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:33:15,121 [3] callback_server INFO  - 2 emails to send
+2014-09-03 17:33:15,123 [3] callback_server ERROR - Procedure or function 'spAddEmailOut' expects parameter '@e_datetime', which was not supplied.
+2014-09-03 17:33:15,123 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:33:15,124 [3] callback_server INFO  - 1 emails to send
+2014-09-03 17:33:15,127 [3] callback_server ERROR - Name
+2014-09-03 17:33:15,127 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:35:35,150 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:35:35,163 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:35:39,697 [1] callback_server DEBUG - Ignite Scheduled Email Creator : stopping...
+2014-09-03 17:35:39,732 [3] callback_server ERROR - Thread was being aborted.
+2014-09-03 17:36:21,900 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:36:21,912 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:36:21,960 [3] callback_server INFO  - 3 emails to send
+2014-09-03 17:36:22,013 [3] callback_server ERROR - Name
+2014-09-03 17:36:22,014 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:36:22,014 [3] callback_server INFO  - 1 emails to send
+2014-09-03 17:36:22,017 [3] callback_server ERROR - Name
+2014-09-03 17:36:22,017 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:37:19,890 [10] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:37:19,903 [10] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:37:31,633 [11] callback_server INFO  - 3 emails to send
+2014-09-03 17:39:27,861 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:39:27,874 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:39:27,936 [3] callback_server INFO  - 3 emails to send
+2014-09-03 17:39:27,959 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:39:32,981 [1] callback_server DEBUG - Ignite Scheduled Email Creator : stopping...
+2014-09-03 17:39:33,019 [3] callback_server ERROR - Thread was being aborted.
+2014-09-03 17:43:04,954 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:43:04,967 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:43:05,016 [3] callback_server INFO  - 3 emails to send
+2014-09-03 17:43:05,040 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:50:54,127 [1] callback_server DEBUG - Ignite Scheduled Email Creator : stopping...
+2014-09-03 17:50:54,128 [3] callback_server ERROR - Thread was being aborted.
+2014-09-03 17:55:11,194 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:55:11,207 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:55:11,277 [3] callback_server INFO  - 3 emails to send
+2014-09-03 17:55:11,298 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 17:58:40,557 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 17:58:40,570 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 17:58:40,638 [3] callback_server INFO  - 2 emails to send
+2014-09-03 17:58:40,656 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 18:03:08,230 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 18:03:08,243 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 18:03:08,290 [3] callback_server INFO  - 1 emails to send
+2014-09-03 18:03:08,307 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 18:03:10,760 [1] callback_server DEBUG - Ignite Scheduled Email Creator : stopping...
+2014-09-03 18:03:10,767 [3] callback_server ERROR - Thread was being aborted.
+2014-09-03 18:04:06,744 [1] callback_server DEBUG - Starting Ignite Scheduled Email Creator...
+2014-09-03 18:04:06,757 [1] callback_server DEBUG - Ignite Scheduled Email Creator : started
+2014-09-03 18:04:06,854 [3] callback_server INFO  - 1 emails to send
+2014-09-03 18:04:06,870 [3] callback_server INFO  - Processing Emails completed 
+
+2014-09-03 18:04:08,873 [1] callback_server DEBUG - Ignite Scheduled Email Creator : stopping...
+2014-09-03 18:04:08,874 [3] callback_server ERROR - Thread was being aborted.

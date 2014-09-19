@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="AuthMaster.master.cs" Inherits="Ignite.NestedMasterPage1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="row">
+        <div class="col-sm-4 col-md-3 sidebar" style="background-color: white" runat="server" ID="Menu">
+            <div class="well well-lg "  Visible="False" runat="Server" ID="EventsMenu">
+                <ul runat="server" class="nav nav-sidebar">
+                    <li id="adminControls">
+                        <asp:LinkButton runat="server"  Visible="False" ID="btnManageEvents"  onClick="btnManageEvents_Click"><i class="fa fa-glass"></i>  Manage Events</asp:LinkButton>
+                        <asp:LinkButton runat="server"  Visible="False" ID="btnViewEventReports"><i class="glyphicon glyphicon-folder-open"></i>  View Event Reports</asp:LinkButton>
+                        <asp:LinkButton ID="btnManageFeedback" runat="server"  Visible="False"><i class="fa fa-comments-o"></i>  Manage Feedback</asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="well well-lg "  Visible="False" runat="Server" ID="OrganisationMenu">
+                <ul runat="server" class="nav nav-sidebar">
+                    <li id="orgControls">
+                        <asp:LinkButton ID="btnManageLocations" runat="server"  Visible="False" onClick="btnManageLocations_Click"><i class="fa fa-building"></i>  Manage Locations</asp:LinkButton>
+                        <%--                        <asp:LinkButton runat="server" ID="btnManageOrganisationsUsers" OnClick="btnManageOrganisationsUsers_Click"><i class="glyphicon glyphicon-user"></i>  Manage Organisation's Users</asp:LinkButton>--%>
+                        <%--                        <asp:LinkButton runat="server" ID="btnOrgViewEventReports"><i class="glyphicon glyphicon-folder-open"></i>  View Event Reports</asp:LinkButton>--%>
+                        <%--                        <asp:LinkButton runat="server" ID="btnPushSMS"><i class="glyphicon glyphicon-envelope"></i>  Push SMS</asp:LinkButton>--%>
+                        <%--                        <asp:LinkButton ID="btnPushEmail" runat="server"><i class="glyphicon glyphicon-envelope"></i>  Push Email</asp:LinkButton>--%>
+                        <%--                        <asp:LinkButton ID="btnPushSocialMedia" runat="server"><i class="fa fa-twitter-square"></i>  Push Social Media Message</asp:LinkButton>--%>
+                        <%--                        <asp:LinkButton ID="btnManageFeedback" runat="server"><i class="fa fa-comments-o"></i>  Manage Feedback</asp:LinkButton>--%>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="well well-lg "  Visible="False" runat="Server" ID="MessagingMenu">
+                <ul id="Ul2" runat="server" class="nav nav-sidebar">
+                    <li>
+                        <asp:LinkButton runat="server"  Visible="False" ID="btnPushSMS"><i class="glyphicon glyphicon-envelope"></i>    Push SMS</asp:LinkButton>
+                        <asp:LinkButton ID="btnPushEmail"  Visible="False" runat="server"><i class="glyphicon glyphicon-envelope"></i>  Push Email</asp:LinkButton>
+                        <asp:LinkButton ID="btnPushSocialMedia"  Visible="False" runat="server"><i class="fa fa-twitter-square"></i>  Push Social Media Message</asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="well well-lg "  Visible="False" runat="Server" ID="UserManagementMenu">
+                <ul runat="server" class="nav nav-sidebar">
+                    <li>
+                        <asp:LinkButton runat="server" ID="btnManageUsers"  Visible="False" onClick="btnManageAdminUsers_Click"><i class="glyphicon glyphicon-user"></i>  Users Setup</asp:LinkButton>
+                        <asp:LinkButton runat="server" ID="btnManageUserGroups"  Visible="False" onClick="btnManageUserGroups_OnClick"><i class="glyphicon glyphicon-user"></i>  User Groups Setup</asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="well well-lg "  Visible="False" runat="Server" ID="SuperAdminMenu">
+                <ul id="Ul1" runat="server" class="nav nav-sidebar">
+                    <li>
+                        <asp:LinkButton ID="btnManageCategories" runat="server"  Visible="False" onClick="btnManageCategories_Click"><i class="glyphicon glyphicon-certificate"></i>Manage Categories</asp:LinkButton>
+                        <asp:LinkButton runat="server" ID="btnManageOrganisations"  Visible="False" onClick="btnManageOrganisations_Click"><i class="glyphicon glyphicon-home"></i>  Manage Organisations</asp:LinkButton>
+                        <asp:LinkButton ID="btnManageFinancials"  Visible="False" runat="server"><i class="glyphicon glyphicon-usd"></i>  Manage Financials</asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main" style="padding-left: 20px">
+        <asp:ContentPlaceHolder runat="server" ID="NestedContent"></asp:ContentPlaceHolder>
+        <hr />
+        <footer>
+            <p class="text-center bottom">&copy; <%: DateTime.Now.Year %> - Powered by theSOFTtribe</p>
+        </footer>
+    </div>
+</asp:Content>

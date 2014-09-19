@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CurrencyDataSet" targetNamespace="http://tempuri.org/CurrencyDataSet.xsd" xmlns:mstns="http://tempuri.org/CurrencyDataSet.xsd" xmlns="http://tempuri.org/CurrencyDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CurrencyDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CurrencyDataSet" msprop:Generator_UserDSName="CurrencyDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Currency" msprop:Generator_TableClassName="CurrencyDataTable" msprop:Generator_TableVarName="tableCurrency" msprop:Generator_TablePropName="Currency" msprop:Generator_RowDeletingName="CurrencyRowDeleting" msprop:Generator_RowChangingName="CurrencyRowChanging" msprop:Generator_RowEvHandlerName="CurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrencyRowDeleted" msprop:Generator_UserTableName="Currency" msprop:Generator_RowChangedName="CurrencyRowChanged" msprop:Generator_RowEvArgName="CurrencyRowChangeEvent" msprop:Generator_RowClassName="CurrencyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msdata:Caption="name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Symbol" msdata:Caption="symbol" msprop:Generator_ColumnVarNameInTable="columnSymbol" msprop:Generator_ColumnPropNameInRow="Symbol" msprop:Generator_ColumnPropNameInTable="SymbolColumn" msprop:Generator_UserColumnName="Symbol" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISOCode" msdata:Caption="iso_code" msprop:Generator_ColumnVarNameInTable="columnISOCode" msprop:Generator_ColumnPropNameInRow="ISOCode" msprop:Generator_ColumnPropNameInTable="ISOCodeColumn" msprop:Generator_UserColumnName="ISOCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitName" msdata:Caption="unit_name" msprop:Generator_ColumnVarNameInTable="columnUnitName" msprop:Generator_ColumnPropNameInRow="UnitName" msprop:Generator_ColumnPropNameInTable="UnitNameColumn" msprop:Generator_UserColumnName="UnitName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubUnitName" msdata:Caption="sub_unit_name" msprop:Generator_ColumnVarNameInTable="columnSubUnitName" msprop:Generator_ColumnPropNameInRow="SubUnitName" msprop:Generator_ColumnPropNameInTable="SubUnitNameColumn" msprop:Generator_UserColumnName="SubUnitName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitNameSingle" msdata:Caption="unit_name_single" msprop:Generator_ColumnVarNameInTable="columnUnitNameSingle" msprop:Generator_ColumnPropNameInRow="UnitNameSingle" msprop:Generator_ColumnPropNameInTable="UnitNameSingleColumn" msprop:Generator_UserColumnName="UnitNameSingle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubUnitNameSingle" msdata:Caption="sub_unit_name_single" msprop:Generator_ColumnVarNameInTable="columnSubUnitNameSingle" msprop:Generator_ColumnPropNameInRow="SubUnitNameSingle" msprop:Generator_ColumnPropNameInTable="SubUnitNameSingleColumn" msprop:Generator_UserColumnName="SubUnitNameSingle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BaseCurrency" msdata:Caption="base_currency" msprop:Generator_ColumnVarNameInTable="columnBaseCurrency" msprop:Generator_ColumnPropNameInRow="BaseCurrency" msprop:Generator_ColumnPropNameInTable="BaseCurrencyColumn" msprop:Generator_UserColumnName="BaseCurrency" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Active" msdata:Caption="active" msprop:Generator_ColumnVarNameInTable="columnActive" msprop:Generator_ColumnPropNameInRow="Active" msprop:Generator_ColumnPropNameInTable="ActiveColumn" msprop:Generator_UserColumnName="Active" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

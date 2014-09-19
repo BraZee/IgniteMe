@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EmailOutDataSet" targetNamespace="http://tempuri.org/EmailOutDataSet.xsd" xmlns:mstns="http://tempuri.org/EmailOutDataSet.xsd" xmlns="http://tempuri.org/EmailOutDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EmailDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EmailDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Ignite.EmailScheduler.Properties.Settings.GlobalReference.Default.EmailDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EmailOutDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EmailOutDataSet" msprop:Generator_UserDSName="EmailOutDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EmailOut" msprop:Generator_TableClassName="EmailOutDataTable" msprop:Generator_TableVarName="tableEmailOut" msprop:Generator_TablePropName="EmailOut" msprop:Generator_RowDeletingName="EmailOutRowDeleting" msprop:Generator_RowChangingName="EmailOutRowChanging" msprop:Generator_RowEvHandlerName="EmailOutRowChangeEventHandler" msprop:Generator_RowDeletedName="EmailOutRowDeleted" msprop:Generator_UserTableName="EmailOut" msprop:Generator_RowChangedName="EmailOutRowChanged" msprop:Generator_RowEvArgName="EmailOutRowChangeEvent" msprop:Generator_RowClassName="EmailOutRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="SenderName" msdata:Caption="sender_name" msprop:Generator_ColumnVarNameInTable="columnSenderName" msprop:Generator_ColumnPropNameInRow="SenderName" msprop:Generator_ColumnPropNameInTable="SenderNameColumn" msprop:Generator_UserColumnName="SenderName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subject" msdata:Caption="subject" msprop:Generator_ColumnVarNameInTable="columnSubject" msprop:Generator_ColumnPropNameInRow="Subject" msprop:Generator_ColumnPropNameInTable="SubjectColumn" msprop:Generator_UserColumnName="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Recipient" msdata:Caption="recipient" msprop:Generator_ColumnVarNameInTable="columnRecipient" msprop:Generator_ColumnPropNameInRow="Recipient" msprop:Generator_ColumnPropNameInTable="RecipientColumn" msprop:Generator_UserColumnName="Recipient" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CC" msdata:Caption="cc" msprop:Generator_ColumnVarNameInTable="columnCC" msprop:Generator_ColumnPropNameInRow="CC" msprop:Generator_ColumnPropNameInTable="CCColumn" msprop:Generator_UserColumnName="CC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BCC" msdata:Caption="bcc" msprop:Generator_ColumnVarNameInTable="columnBCC" msprop:Generator_ColumnPropNameInRow="BCC" msprop:Generator_ColumnPropNameInTable="BCCColumn" msprop:Generator_UserColumnName="BCC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Message" msdata:Caption="message" msprop:Generator_ColumnVarNameInTable="columnMessage" msprop:Generator_ColumnPropNameInRow="Message" msprop:Generator_ColumnPropNameInTable="MessageColumn" msprop:Generator_UserColumnName="Message" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GatewayId" msdata:Caption="gateway_id" msprop:Generator_ColumnVarNameInTable="columnGatewayId" msprop:Generator_ColumnPropNameInRow="GatewayId" msprop:Generator_ColumnPropNameInTable="GatewayIdColumn" msprop:Generator_UserColumnName="GatewayId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Attachments" msdata:Caption="attachments" msprop:Generator_ColumnVarNameInTable="columnAttachments" msprop:Generator_ColumnPropNameInRow="Attachments" msprop:Generator_ColumnPropNameInTable="AttachmentsColumn" msprop:Generator_UserColumnName="Attachments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msdata:Caption="status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:int" minOccurs="0" />
+              <xs:element name="ErrorCode" msdata:Caption="error_code" msprop:Generator_ColumnVarNameInTable="columnErrorCode" msprop:Generator_ColumnPropNameInRow="ErrorCode" msprop:Generator_ColumnPropNameInTable="ErrorCodeColumn" msprop:Generator_UserColumnName="ErrorCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EDateTime" msdata:Caption="e_datetime" msprop:Generator_ColumnVarNameInTable="columnEDateTime" msprop:Generator_ColumnPropNameInRow="EDateTime" msprop:Generator_ColumnPropNameInTable="EDateTimeColumn" msprop:Generator_UserColumnName="EDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SDateTime" msdata:Caption="s_datetime" msprop:Generator_ColumnVarNameInTable="columnSDateTime" msprop:Generator_ColumnPropNameInRow="SDateTime" msprop:Generator_ColumnPropNameInTable="SDateTimeColumn" msprop:Generator_UserColumnName="SDateTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

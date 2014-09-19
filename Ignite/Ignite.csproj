@@ -1,0 +1,1284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF772F39-AE03-40BA-8B41-6BFCCA6F8F85}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ignite</RootNamespace>
+    <AssemblyName>Ignite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConfigurationApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f4b2e91a1c98c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>WS\libs\ConfigurationApi.dll</HintPath>
+    </Reference>
+    <Reference Include="ConfigurationManager, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8f4b2e91a1c98c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>WS\libs\ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>WS\libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="LoggingWrapper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8f4b2e91a1c98c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>WS\libs\LoggingWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RandomStringGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f4b2e91a1c98c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DAL\libs\RandomStringGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.2\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.2\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\ManageFinancials.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\ManageInterests.aspx" />
+    <Content Include="Admin\OrganisationCategories.aspx" />
+    <Content Include="bin\Ignite.dll" />
+    <Content Include="bin\Ignite.pdb" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dashboard.css" />
+    <Content Include="Content\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="Content\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\style.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="LandingPage.aspx" />
+    <Content Include="Organisations\Events\EventAlerts.aspx" />
+    <Content Include="Organisations\Events\EventCategories.aspx" />
+    <Content Include="Organisations\Events\EventCoordinator.aspx" />
+    <Content Include="Organisations\Events\EventInterests.aspx" />
+    <Content Include="Organisations\Events\EventSessions.aspx" />
+    <Content Include="Organisations\Events\EventSocialMediaPage.aspx" />
+    <Content Include="Organisations\Events\EventPricing.aspx" />
+    <Content Include="Organisations\ManageCurrency.aspx" />
+    <Content Include="plugins\bootstrapvalidator\bootstrapValidator.css" />
+    <Content Include="plugins\bootstrapvalidator\bootstrapValidator.js" />
+    <Content Include="plugins\bootstrapvalidator\bootstrapValidator.min.css" />
+    <Content Include="plugins\bootstrapvalidator\bootstrapValidator.min.js" />
+    <Content Include="plugins\bootstrap\bootstrap-theme.css" />
+    <Content Include="plugins\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="plugins\bootstrap\bootstrap.css" />
+    <Content Include="plugins\bootstrap\bootstrap.js" />
+    <Content Include="plugins\bootstrap\bootstrap.min.css" />
+    <Content Include="plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="plugins\d3\d3.v3.js" />
+    <Content Include="plugins\d3\d3.v3.min.js" />
+    <Content Include="plugins\datatables\copy_csv_xls_pdf.swf" />
+    <Content Include="plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="plugins\datatables\jquery.dataTables.js" />
+    <Content Include="plugins\datatables\TableTools.js" />
+    <Content Include="plugins\datatables\TableTools_orig.js" />
+    <Content Include="plugins\datatables\ZeroClipboard.js" />
+    <Content Include="plugins\fancybox\blank.gif" />
+    <Content Include="plugins\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="plugins\fancybox\fancybox_loading.gif" />
+    <Content Include="plugins\fancybox\fancybox_overlay.png" />
+    <Content Include="plugins\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="plugins\fancybox\fancybox_sprite.png" />
+    <Content Include="plugins\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="plugins\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="plugins\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="plugins\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="plugins\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="plugins\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="plugins\fancybox\jquery.fancybox.js" />
+    <Content Include="plugins\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="plugins\fineuploader\edit.gif" />
+    <Content Include="plugins\fineuploader\fineuploader-5.0.1.css" />
+    <Content Include="plugins\fineuploader\fineuploader-5.0.1.min.css" />
+    <Content Include="plugins\fineuploader\iframe.xss.response-5.0.1.js" />
+    <Content Include="plugins\fineuploader\jquery.fineuploader-5.0.1.js" />
+    <Content Include="plugins\fineuploader\jquery.fineuploader-5.0.1.min.js" />
+    <Content Include="plugins\fineuploader\loading.gif" />
+    <Content Include="plugins\fineuploader\processing.gif" />
+    <Content Include="plugins\flot\jquery.flot.js" />
+    <Content Include="plugins\flot\jquery.flot.resize.js" />
+    <Content Include="plugins\flot\jquery.flot.time.js" />
+    <Content Include="plugins\flot\LICENSE.txt" />
+    <Content Include="plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="plugins\fullcalendar\gcal.js" />
+    <Content Include="plugins\fullcalendar\lang\all.js" />
+    <Content Include="plugins\fullcalendar\lang\ar-ma.js" />
+    <Content Include="plugins\fullcalendar\lang\ar.js" />
+    <Content Include="plugins\fullcalendar\lang\bg.js" />
+    <Content Include="plugins\fullcalendar\lang\ca.js" />
+    <Content Include="plugins\fullcalendar\lang\cs.js" />
+    <Content Include="plugins\fullcalendar\lang\da.js" />
+    <Content Include="plugins\fullcalendar\lang\de.js" />
+    <Content Include="plugins\fullcalendar\lang\el.js" />
+    <Content Include="plugins\fullcalendar\lang\en-au.js" />
+    <Content Include="plugins\fullcalendar\lang\en-ca.js" />
+    <Content Include="plugins\fullcalendar\lang\en-gb.js" />
+    <Content Include="plugins\fullcalendar\lang\es.js" />
+    <Content Include="plugins\fullcalendar\lang\fa.js" />
+    <Content Include="plugins\fullcalendar\lang\fi.js" />
+    <Content Include="plugins\fullcalendar\lang\fr-ca.js" />
+    <Content Include="plugins\fullcalendar\lang\fr.js" />
+    <Content Include="plugins\fullcalendar\lang\hi.js" />
+    <Content Include="plugins\fullcalendar\lang\hr.js" />
+    <Content Include="plugins\fullcalendar\lang\hu.js" />
+    <Content Include="plugins\fullcalendar\lang\it.js" />
+    <Content Include="plugins\fullcalendar\lang\ja.js" />
+    <Content Include="plugins\fullcalendar\lang\ko.js" />
+    <Content Include="plugins\fullcalendar\lang\lt.js" />
+    <Content Include="plugins\fullcalendar\lang\lv.js" />
+    <Content Include="plugins\fullcalendar\lang\nl.js" />
+    <Content Include="plugins\fullcalendar\lang\pl.js" />
+    <Content Include="plugins\fullcalendar\lang\pt-br.js" />
+    <Content Include="plugins\fullcalendar\lang\pt.js" />
+    <Content Include="plugins\fullcalendar\lang\ro.js" />
+    <Content Include="plugins\fullcalendar\lang\ru.js" />
+    <Content Include="plugins\fullcalendar\lang\sk.js" />
+    <Content Include="plugins\fullcalendar\lang\sl.js" />
+    <Content Include="plugins\fullcalendar\lang\sv.js" />
+    <Content Include="plugins\fullcalendar\lang\th.js" />
+    <Content Include="plugins\fullcalendar\lang\tr.js" />
+    <Content Include="plugins\fullcalendar\lang\uk.js" />
+    <Content Include="plugins\fullcalendar\lang\zh-cn.js" />
+    <Content Include="plugins\fullcalendar\lang\zh-tw.js" />
+    <Content Include="plugins\jQuery-Knob\jquery.knob.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-af.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-am.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-bg.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ca.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-cs.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-da.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-de.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-el.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-es.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-et.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-eu.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fi.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fr.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-gl.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-he.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hr.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hu.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-id.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-it.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ja.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ko.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-lt.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-nl.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-no.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pl.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt-BR.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ro.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ru.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sk.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-RS.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-YU.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sv.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-th.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-tr.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-uk.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-vi.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-CN.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-TW.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\index.html" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\jquery-ui-sliderAccess.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.css" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.js" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.css" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="plugins\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="plugins\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="plugins\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="plugins\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="plugins\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="plugins\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="plugins\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="plugins\jquery\jquery-2.1.0.min.js" />
+    <Content Include="plugins\justified-gallery\jquery.justifiedgallery.css" />
+    <Content Include="plugins\justified-gallery\jquery.justifiedgallery.js" />
+    <Content Include="plugins\justified-gallery\jquery.justifiedgallery.min.css" />
+    <Content Include="plugins\justified-gallery\jquery.justifiedgallery.min.js" />
+    <Content Include="plugins\justified-gallery\loading.gif" />
+    <Content Include="plugins\moment\langs.js" />
+    <Content Include="plugins\moment\langs.min.js" />
+    <Content Include="plugins\moment\moment-with-langs.js" />
+    <Content Include="plugins\moment\moment-with-langs.min.js" />
+    <Content Include="plugins\moment\moment.min.js" />
+    <Content Include="plugins\morris\morris.js" />
+    <Content Include="plugins\morris\morris.min.js" />
+    <Content Include="plugins\raphael\raphael-min.js" />
+    <Content Include="plugins\raphael\raphael.js" />
+    <Content Include="plugins\select2\select2-bootstrap.css" />
+    <Content Include="plugins\select2\select2-spinner.gif" />
+    <Content Include="plugins\select2\select2.css" />
+    <Content Include="plugins\select2\select2.js" />
+    <Content Include="plugins\select2\select2.min.js" />
+    <Content Include="plugins\select2\select2.png" />
+    <Content Include="plugins\select2\select2x2.png" />
+    <Content Include="plugins\select2\select2_locale_ar.js" />
+    <Content Include="plugins\select2\select2_locale_bg.js" />
+    <Content Include="plugins\select2\select2_locale_ca.js" />
+    <Content Include="plugins\select2\select2_locale_cs.js" />
+    <Content Include="plugins\select2\select2_locale_da.js" />
+    <Content Include="plugins\select2\select2_locale_de.js" />
+    <Content Include="plugins\select2\select2_locale_el.js" />
+    <Content Include="plugins\select2\select2_locale_es.js" />
+    <Content Include="plugins\select2\select2_locale_et.js" />
+    <Content Include="plugins\select2\select2_locale_eu.js" />
+    <Content Include="plugins\select2\select2_locale_fa.js" />
+    <Content Include="plugins\select2\select2_locale_fi.js" />
+    <Content Include="plugins\select2\select2_locale_fr.js" />
+    <Content Include="plugins\select2\select2_locale_gl.js" />
+    <Content Include="plugins\select2\select2_locale_he.js" />
+    <Content Include="plugins\select2\select2_locale_hr.js" />
+    <Content Include="plugins\select2\select2_locale_hu.js" />
+    <Content Include="plugins\select2\select2_locale_id.js" />
+    <Content Include="plugins\select2\select2_locale_is.js" />
+    <Content Include="plugins\select2\select2_locale_it.js" />
+    <Content Include="plugins\select2\select2_locale_ja.js" />
+    <Content Include="plugins\select2\select2_locale_ko.js" />
+    <Content Include="plugins\select2\select2_locale_lt.js" />
+    <Content Include="plugins\select2\select2_locale_lv.js" />
+    <Content Include="plugins\select2\select2_locale_mk.js" />
+    <Content Include="plugins\select2\select2_locale_ms.js" />
+    <Content Include="plugins\select2\select2_locale_nl.js" />
+    <Content Include="plugins\select2\select2_locale_no.js" />
+    <Content Include="plugins\select2\select2_locale_pl.js" />
+    <Content Include="plugins\select2\select2_locale_pt-BR.js" />
+    <Content Include="plugins\select2\select2_locale_pt-PT.js" />
+    <Content Include="plugins\select2\select2_locale_ro.js" />
+    <Content Include="plugins\select2\select2_locale_ru.js" />
+    <Content Include="plugins\select2\select2_locale_sk.js" />
+    <Content Include="plugins\select2\select2_locale_sv.js" />
+    <Content Include="plugins\select2\select2_locale_th.js" />
+    <Content Include="plugins\select2\select2_locale_tr.js" />
+    <Content Include="plugins\select2\select2_locale_ua.js" />
+    <Content Include="plugins\select2\select2_locale_vi.js" />
+    <Content Include="plugins\select2\select2_locale_zh-CN.js" />
+    <Content Include="plugins\select2\select2_locale_zh-TW.js" />
+    <Content Include="plugins\sparkline\jquery.sparkline.js" />
+    <Content Include="plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="plugins\tinymce\jquery.tinymce.min.js" />
+    <Content Include="plugins\tinymce\license.txt" />
+    <Content Include="plugins\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="plugins\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\example\dialog.html" />
+    <Content Include="plugins\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="plugins\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="plugins\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="plugins\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="plugins\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="plugins\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce-small.dev.svg" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce.dev.svg" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="plugins\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="plugins\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="plugins\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="plugins\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="plugins\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="plugins\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="plugins\tinymce\themes\modern\theme.min.js" />
+    <Content Include="plugins\tinymce\tinymce.min.js" />
+    <Content Include="plugins\xcharts\xcharts.css" />
+    <Content Include="plugins\xcharts\xcharts.js" />
+    <Content Include="plugins\xcharts\xcharts.min.css" />
+    <Content Include="plugins\xcharts\xcharts.min.js" />
+    <Content Include="Scripts\devoops.js" />
+    <Content Include="Scripts\devoops.min.js" />
+    <Content Include="packages.config" />
+    <Content Include="DAL\EmailOutDataSet.xsc">
+      <DependentUpon>EmailOutDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\EmailOutDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmailOutDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\EmailOutDataSet.xss">
+      <DependentUpon>EmailOutDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="SendEmail.aspx" />
+    <Content Include="SendSMS.aspx" />
+    <Content Include="Users\ManageUserAccounts.aspx" />
+    <Content Include="Admin\ManageOrganisations.aspx" />
+    <Content Include="Content\site.css" />
+    <Content Include="DAL\libs\RandomStringGenerator.dll" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\metisMenu.min.css" />
+    <Content Include="Content\sb-admin-2.css" />
+    <Content Include="Admin\ManageCategories.aspx" />
+    <Content Include="obj\Debug\Ignite.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Ignite.dll" />
+    <Content Include="obj\Debug\Ignite.pdb" />
+    <Content Include="obj\Debug\TempPE\DAL.Data Objects.WishesDS.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DAL.OperationDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DAL.OrganisationDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DAL.SecurityQuestionDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DAL.SysParameterDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DAL.UserDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DAL.UserGroupOperationDataSet1.Designer.cs.dll" />
+    <Content Include="Organisations\Default.aspx" />
+    <Content Include="Organisations\Events\ManageEvents.aspx" />
+    <Content Include="Organisations\ManageLocations.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\metisMenu.min.js" />
+    <Content Include="Scripts\myScript.js" />
+    <Content Include="Scripts\sb-admin-2.js" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Users\UserGroupOperations.aspx" />
+    <Content Include="Users\UserGroupsSetup.aspx" />
+    <Content Include="Users\UserProfileDetails.aspx" />
+    <Content Include="Users\UserProfileSecurity.aspx" />
+    <Content Include="Web References\SecurityManager\AuthResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SecurityManager\OperationDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Site.Master" />
+    <Content Include="plugins\bootstrapvalidator\bootstrapValidator.scss" />
+    <Content Include="plugins\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="plugins\bootstrap\bootstrap.css.map" />
+    <Content Include="plugins\d3\LICENSE" />
+    <Content Include="plugins\fineuploader\LICENSE" />
+    <Content Include="plugins\jQuery-Knob\LICENSE" />
+    <Content Include="plugins\jquery-ui-timepicker-addon\LICENSE-MIT" />
+    <Content Include="plugins\justified-gallery\README.md" />
+    <Content Include="plugins\moment\LICENSE" />
+    <Content Include="plugins\select2\bower.json" />
+    <Content Include="plugins\select2\LICENSE" />
+    <Content Include="plugins\select2\README.md" />
+    <Content Include="plugins\select2\release.sh" />
+    <Content Include="plugins\select2\select2.jquery.json" />
+    <Content Include="plugins\select2\select2_locale_en.js.template" />
+    <Content Include="plugins\tinymce\langs\readme.md" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="plugins\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="plugins\xcharts\LICENSE" />
+    <Content Include="plugins\xcharts\README.md" />
+    <Content Include="SiteChild.master" />
+    <Content Include="DAL\CategoryDataSet.xsc">
+      <DependentUpon>CategoryDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\CategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CategoryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\CategoryDataSet.xss">
+      <DependentUpon>CategoryDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\EventSessionDataSet.xsc">
+      <DependentUpon>EventSessionDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\EventDataSet.xsc">
+      <DependentUpon>EventDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\CurrencyDataSet.xsc">
+      <DependentUpon>CurrencyDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\CurrencyDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CurrencyDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\CurrencyDataSet.xss">
+      <DependentUpon>CurrencyDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\EmailDataSet.xsc">
+      <DependentUpon>EmailDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\EmailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmailDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\EmailDataSet.xss">
+      <DependentUpon>EmailDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\EventDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\EventDataSet.xss">
+      <DependentUpon>EventDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\EventSessionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventSessionDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\EventSessionDataSet.xss">
+      <DependentUpon>EventSessionDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\EventTicketDataSet.xsc">
+      <DependentUpon>EventTicketDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\EventTicketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventTicketDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\EventTicketDataSet.xss">
+      <DependentUpon>EventTicketDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\OperationDataSet.xsc">
+      <DependentUpon>OperationDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\LocationDataSet.xsc">
+      <DependentUpon>LocationDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\LocationDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocationDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\LocationDataSet.xss">
+      <DependentUpon>LocationDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\OperationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\OperationDataSet.xss">
+      <DependentUpon>OperationDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\OrganisationDataSet.xsc">
+      <DependentUpon>OrganisationDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\OrganisationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrganisationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\OrganisationDataSet.xss">
+      <DependentUpon>OrganisationDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\SecurityQuestionDataSet.xsc">
+      <DependentUpon>SecurityQuestionDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\SecurityQuestionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SecurityQuestionDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\SecurityQuestionDataSet.xss">
+      <DependentUpon>SecurityQuestionDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\SysParameterDataSet.xsc">
+      <DependentUpon>SysParameterDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\SocialMediaDataSet.xsc">
+      <DependentUpon>SocialMediaDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\SMSDataSet.xsc">
+      <DependentUpon>SMSDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\SMSDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SMSDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\SMSDataSet.xss">
+      <DependentUpon>SMSDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\SocialMediaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SocialMediaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\SocialMediaDataSet.xss">
+      <DependentUpon>SocialMediaDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\SysParameterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SysParameterDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\SysParameterDataSet.xss">
+      <DependentUpon>SysParameterDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\UserDataSet.xsc">
+      <DependentUpon>UserDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\UserDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\UserDataSet.xss">
+      <DependentUpon>UserDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\UserGroupOperationDataSet.xsc">
+      <DependentUpon>UserGroupOperationDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\UserGroupOperationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserGroupOperationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\UserGroupOperationDataSet.xss">
+      <DependentUpon>UserGroupOperationDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="Web References\SecurityManager\OperationDataSet.xsd" />
+    <Content Include="Web References\SecurityManager\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\SecurityManager\SecurityManager.disco" />
+    <Content Include="Web References\UsersManager\OperationDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UsersManager\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\UsersManager\SecurityQuestionDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UsersManager\SysParameterDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UsersManager\UserDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UsersManager\UserGroupOperationDataSet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\UsersManager\UsersManager.disco" />
+    <Content Include="Web.config" />
+    <Content Include="WS\conf\Forex\LoggingWrapper.xml" />
+    <Content Include="WS\conf\Forex\preload.xml" />
+    <Content Include="WS\libs\ConfigurationApi.dll" />
+    <Content Include="WS\libs\ConfigurationManager.dll" />
+    <Content Include="WS\libs\log4net.dll" />
+    <Content Include="WS\libs\LoggingWrapper.dll" />
+    <Content Include="WS\libs\RandomStringGenerator.dll" />
+    <Content Include="WS\SecurityManager.asmx" />
+    <Content Include="WS\UsersManager.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\ManageFinancials.aspx.cs">
+      <DependentUpon>ManageFinancials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageFinancials.aspx.designer.cs">
+      <DependentUpon>ManageFinancials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageInterests.aspx.cs">
+      <DependentUpon>ManageInterests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageInterests.aspx.designer.cs">
+      <DependentUpon>ManageInterests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrganisationCategories.aspx.cs">
+      <DependentUpon>OrganisationCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrganisationCategories.aspx.designer.cs">
+      <DependentUpon>OrganisationCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CategoryDataSet.cs">
+      <DependentUpon>CategoryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\CategoryDataSet.Designer.cs">
+      <DependentUpon>CategoryDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CategoryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CurrencyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrencyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EmailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EmailOutDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailOutDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EventDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EventSessionDataSet.Designer.cs" />
+    <Compile Include="DAL\EventSessionDataSet1.Designer.cs" />
+    <Compile Include="DAL\EventSessionDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventSessionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EventTicketDataSet.cs">
+      <DependentUpon>EventTicketDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\EventTicketDataSet.Designer.cs">
+      <DependentUpon>EventTicketDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EventTicketDataSet1.Designer.cs" />
+    <Compile Include="DAL\EventTicketDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventTicketDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LocationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OperationDataSet.Designer.cs" />
+    <Compile Include="DAL\OperationDataSet1.Designer.cs" />
+    <Compile Include="DAL\OperationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\OrganisationDataSet.Designer.cs" />
+    <Compile Include="DAL\OrganisationDataSet1.Designer.cs" />
+    <Compile Include="DAL\OrganisationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrganisationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SecurityQuestionDataSet.Designer.cs" />
+    <Compile Include="DAL\SecurityQuestionDataSet1.Designer.cs" />
+    <Compile Include="DAL\SecurityQuestionDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityQuestionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SocialMediaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocialMediaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SysParameterDataSet.Designer.cs" />
+    <Compile Include="DAL\SysParameterDataSet1.Designer.cs" />
+    <Compile Include="DAL\SysParameterDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysParameterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\UserDataSet.Designer.cs" />
+    <Compile Include="DAL\UserDataSet1.Designer.cs" />
+    <Compile Include="DAL\UserDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\UserGroupOperationDataSet.Designer.cs" />
+    <Compile Include="DAL\UserGroupOperationDataSet1.Designer.cs" />
+    <Compile Include="DAL\UserGroupOperationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserGroupOperationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.aspx.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\EventAlerts.aspx.cs">
+      <DependentUpon>EventAlerts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\EventAlerts.aspx.designer.cs">
+      <DependentUpon>EventAlerts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\EventCategories.aspx.cs">
+      <DependentUpon>EventCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\EventCategories.aspx.designer.cs">
+      <DependentUpon>EventCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\EventCoordinator.aspx.cs">
+      <DependentUpon>EventCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\EventCoordinator.aspx.designer.cs">
+      <DependentUpon>EventCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\EventInterests.aspx.cs">
+      <DependentUpon>EventInterests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\EventInterests.aspx.designer.cs">
+      <DependentUpon>EventInterests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\EventSessions.aspx.cs">
+      <DependentUpon>EventSessions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\EventSessions.aspx.designer.cs">
+      <DependentUpon>EventSessions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\EventSocialMediaPage.aspx.cs">
+      <DependentUpon>EventSocialMediaPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\EventSocialMediaPage.aspx.designer.cs">
+      <DependentUpon>EventSocialMediaPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\EventPricing.aspx.cs">
+      <DependentUpon>EventPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\EventPricing.aspx.designer.cs">
+      <DependentUpon>EventPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\ManageCurrency.aspx.cs">
+      <DependentUpon>ManageCurrency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\ManageCurrency.aspx.designer.cs">
+      <DependentUpon>ManageCurrency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendEmail.aspx.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendEmail.aspx.designer.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendSMS.aspx.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendSMS.aspx.designer.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteChild.master.cs">
+      <DependentUpon>SiteChild.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteChild.master.designer.cs">
+      <DependentUpon>SiteChild.master</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ManageUserAccounts.aspx.cs">
+      <DependentUpon>ManageUserAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\ManageUserAccounts.aspx.designer.cs">
+      <DependentUpon>ManageUserAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageOrganisations.aspx.cs">
+      <DependentUpon>ManageOrganisations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageOrganisations.aspx.designer.cs">
+      <DependentUpon>ManageOrganisations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageCategories.aspx.cs">
+      <DependentUpon>ManageCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageCategories.aspx.designer.cs">
+      <DependentUpon>ManageCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthMaster.master.cs">
+      <DependentUpon>AuthMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthMaster.master.designer.cs">
+      <DependentUpon>AuthMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AuthResult.cs" />
+    <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\Exceptions\ExpiredUserTokenException.cs" />
+    <Compile Include="DAL\Exceptions\InvalidEntityException.cs" />
+    <Compile Include="DAL\Exceptions\InvalidUserTokenException.cs" />
+    <Compile Include="DAL\Exceptions\OperationFailedException.cs" />
+    <Compile Include="DAL\LoginReturn.cs" />
+    <Compile Include="DAL\Utils.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Organisations\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\Events\ManageEvents.aspx.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\Events\ManageEvents.aspx.designer.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisations\ManageLocations.aspx.cs">
+      <DependentUpon>ManageLocations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisations\ManageLocations.aspx.designer.cs">
+      <DependentUpon>ManageLocations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserGroupOperations.aspx.cs">
+      <DependentUpon>UserGroupOperations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserGroupOperations.aspx.designer.cs">
+      <DependentUpon>UserGroupOperations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserGroupsSetup.aspx.cs">
+      <DependentUpon>UserGroupsSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserGroupsSetup.aspx.designer.cs">
+      <DependentUpon>UserGroupsSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserProfileDetails.aspx.cs">
+      <DependentUpon>UserProfileDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserProfileDetails.aspx.designer.cs">
+      <DependentUpon>UserProfileDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserProfileSecurity.aspx.cs">
+      <DependentUpon>UserProfileSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserProfileSecurity.aspx.designer.cs">
+      <DependentUpon>UserProfileSecurity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Web References\SecurityManager\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UsersManager\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WS\SecurityManager.asmx.cs">
+      <DependentUpon>SecurityManager.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WS\UsersManager.asmx.cs">
+      <DependentUpon>UsersManager.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\font-awesome-4.1.0\less\bordered-pulled.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\core.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\fixed-width.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\font-awesome.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\icons.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\larger.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\list.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\mixins.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\path.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\rotated-flipped.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\spinning.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\stacked.less" />
+    <Content Include="Content\font-awesome-4.1.0\less\variables.less" />
+    <Content Include="Content\font-awesome-4.1.0\scss\font-awesome.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_core.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_icons.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_larger.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_list.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_mixins.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_path.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_spinning.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_stacked.scss" />
+    <Content Include="Content\font-awesome-4.1.0\scss\_variables.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Default.Master" />
+    <Content Include="AuthMaster.master" />
+    <Content Include="Scripts\jquery.min.map" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Ignite.csprojResolveAssemblyReference.cache" />
+    <Content Include="Scripts\toastr.min.js.map" />
+    <Content Include="Web References\SecurityManager\SecurityManager.wsdl" />
+    <None Include="Web References\UsersManager\OperationDataSet.xsd" />
+    <None Include="Web References\UsersManager\SecurityQuestionDataSet.xsd" />
+    <None Include="Web References\UsersManager\SysParameterDataSet.xsd" />
+    <None Include="Web References\UsersManager\UserDataSet.xsd" />
+    <None Include="Web References\UsersManager\UserGroupOperationDataSet.xsd" />
+    <Content Include="Web References\UsersManager\UsersManager.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WS\conf\Forex\cm.dtd" />
+    <Content Include="WS\conf\Forex\log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:40869/WS/SecurityManager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SecurityManager\</RelPath>
+      <UpdateFromURL>http://localhost:40869/WS/SecurityManager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Ignite_SecurityManager_SecurityManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:40869/WS/UsersManager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UsersManager\</RelPath>
+      <UpdateFromURL>http://localhost:40869/WS/UsersManager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Ignite_UsersManager_UsersManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:40869/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

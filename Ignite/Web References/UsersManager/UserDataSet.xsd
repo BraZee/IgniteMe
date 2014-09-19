@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://thesofttribe.com/platform/sledger/UserDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://thesofttribe.com/platform/sledger/UserDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://thesofttribe.com/platform/sledger/UserDataSet.xsd" id="UserDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="UserDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="User">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="UserId" type="xs:int" />
+              <xs:element minOccurs="0" name="FirstName" type="xs:string" />
+              <xs:element minOccurs="0" name="LastName" type="xs:string" />
+              <xs:element minOccurs="0" name="Email" type="xs:string" />
+              <xs:element minOccurs="0" name="Logon" type="xs:string" />
+              <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+              <xs:element minOccurs="0" name="StatusId" type="xs:int" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="UserGroupId" type="xs:int" />
+              <xs:element minOccurs="0" name="UserGroup" type="xs:string" />
+              <xs:element minOccurs="0" name="Hash" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

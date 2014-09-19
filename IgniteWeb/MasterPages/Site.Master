@@ -1,0 +1,313 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="IgniteWeb.MasterPages.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <title><%: Page.Title %> - IGNITE!!!</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link href="~/Content/css/yamm.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ScriptManager runat="server" EnablePageMethods="True" EnablePartialRendering="True">
+                <Scripts>
+                    <asp:ScriptReference Name="jquery"/>
+                </Scripts>
+            </asp:ScriptManager>
+
+            <!-- Header block begin -->
+            <header class="header-block">
+                <div class="container">
+                    <div class="header-top">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <h1><a href="index.html">
+                                <img class="img-responsive" src="images/logo.png" alt="Logo" title="Ignite"></a></h1>
+                        </div>
+                        <!-- Member area -->
+                        <div class="member-area" runat="server" ID="memberArea">
+                            <ul>
+                                <li runat="server" ID="register" Visible="False">
+                                    <a href="/Register.aspx"><i class="fa fa-plus"></i>Register</a>
+                                </li>
+                                <li runat="server" ID="login" Visible="False">
+                                    <a class="login-link" href="#"><i class="fa fa-user"></i>Login</a>
+                                </li>
+                            </ul>
+                            <div class="login-box" style="margin: 10px; margin-top: 0">
+                                <a class="close login-box-close" href="#">&times;</a>
+                                <h4 class="login-box-head">Login Form</h4>
+                                <div class="control-group">
+                                    <label>Username</label>
+                                    <input class="form-control" placeholder="Username..." type="text">
+                                </div>
+                                <div class="control-group">
+                                    <label>Password</label>
+                                    <input class="form-control" placeholder="Password..." type="text">
+                                </div>
+                                <div class="login-actions">
+                                    <button class="btn btn-success" style="background: green">Log Me In</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- We are in social nets -->
+                        <div class="social-icons" style:>
+                            <ul>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="facebook"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="twitter"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="google+"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+
+                    <!-- Navigation -->
+                    <nav class="mainmenu navbar yamm navbar-default" role="navigation" style="position: inherit">
+                        <ul id="nav" class="nav nav-tabs ">
+                            <li runat="server" ID="Home" Visible="False">
+                                <a href="index.html"><i class="fa fa-home"></i></a>
+                                <a class="tiny-home" href="index.html">Home</a>
+                            </li>
+                            <li runat="server" ID="NavLink" Visible="False"><a href="modern-listing.html">Nav Link</a></li>
+                            <li class="dropdown yamm-fw" runat="server" ID="NavDropdown" Visible="False">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nav Dropdown<i class="fa fa-chevron-down"></i></a>
+                                <!-- Dropdown menu begin -->
+                                <ul class="dropdown-menu">
+                                    <li class="hr-vert"></li>
+                                    <li>
+                                        <div class="yamm-content">
+                                            <div id="drop-inline" class="row">
+                                                <div class="col-md-3">
+                                                    <ul>
+                                                        <li><a href="blog-listing.html">Web Design</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="blog-listing.html">Typography</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="blog-listing.html">Inspiration</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="blog-listing.html">Print</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="blog-listing.html">Popular post</a>
+                                                    <ul class="post-list">
+                                                        <li>
+                                                            <article class="post-type-2 clearfix">
+                                                                <figure>
+                                                                    <img class="img-responsive" src="images/page01_img18.jpg" alt="page01_img18">
+                                                                </figure>
+                                                                <div>
+                                                                    <p class="meta-tags">
+                                                                        <span><i class="fa fa-clock-o"></i>04.09.2014</span>
+                                                                        <span><i class="fa fa-comments"></i>15</span>
+                                                                        <span><i class="fa fa-heart"></i>5</span>
+                                                                    </p>
+                                                                    <h4><a href="audio-format-post.html">Wood Burning Logo Mock-Up Template</a></h4>
+                                                                </div>
+                                                            </article>
+                                                        </li>
+                                                        <li>
+                                                            <article class="post-type-2 clearfix">
+                                                                <figure>
+                                                                    <img class="img-responsive" src="images/page01_img18.jpg" alt="page01_img18">
+                                                                </figure>
+                                                                <div>
+                                                                    <p class="meta-tags">
+                                                                        <span><i class="fa fa-clock-o"></i>04.09.2014</span>
+                                                                        <span><i class="fa fa-comments"></i>15</span>
+                                                                        <span><i class="fa fa-heart"></i>5</span>
+                                                                    </p>
+                                                                    <h4><a href="default-single-post.html">Wood Burning Logo Mock-Up Template</a></h4>
+                                                                </div>
+                                                            </article>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="blog-listing.html">Recent</a>
+                                                    <ul class="post-list">
+                                                        <li>
+                                                            <article class="post-type-2 clearfix">
+                                                                <figure>
+                                                                    <img class="img-responsive" src="images/page01_img18.jpg" alt="page01_img18">
+                                                                </figure>
+                                                                <div>
+                                                                    <p class="meta-tags">
+                                                                        <span><i class="fa fa-clock-o"></i>04.09.2014</span>
+                                                                        <span><i class="fa fa-comments"></i>15</span>
+                                                                        <span><i class="fa fa-heart"></i>5</span>
+                                                                    </p>
+                                                                    <h4><a href="gallery-format-post.html">Wood Burning Logo Mock-Up Template</a></h4>
+                                                                </div>
+                                                            </article>
+                                                        </li>
+                                                        <li>
+                                                            <article class="post-type-2 clearfix">
+                                                                <figure>
+                                                                    <img class="img-responsive" src="images/page01_img18.jpg" alt="page01_img18">
+                                                                </figure>
+                                                                <div>
+                                                                    <p class="meta-tags">
+                                                                        <span><i class="fa fa-clock-o"></i>04.09.2014</span>
+                                                                        <span><i class="fa fa-comments"></i>15</span>
+                                                                        <span><i class="fa fa-heart"></i>5</span>
+                                                                    </p>
+                                                                    <h4><a href="video-format-post.html">Wood Burning Logo Mock-Up Template</a></h4>
+                                                                </div>
+                                                            </article>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- Dropdown menu end -->
+                            </li>
+                            <li class="dropdown yamm-fw" runat="server" ID="NavDropdown2" Visible="False">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nav Dropdown 2<i class="fa fa-chevron-down"></i></a>
+                                <!-- Dropdown menu begin -->
+                                <ul class="dropdown-menu features">
+                                    <li>
+                                        <div class="col-md-3">
+                                            <p>HOMEpage & Listing</p>
+                                            <ul class="features-dropdown">
+                                                <li class="divider"></li>
+                                                <li><a href="index.html">Default Home Page</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="index-full-width.html">Full Width Home Page</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="index.html">All homepage blocks</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="modern-listing.html">Modern Listing</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="timeline-listing.html">Timeline Listing</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="blog-listing.html">Blog Style Listing</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-md-3">
+                                            <p>Pages</p>
+                                            <ul class="features-dropdown">
+                                                <li class="divider"></li>
+                                                <li><a href="404.html">404 Example</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="author-page.html">Author Page</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="contributors.html">Contributors</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="site-map.html">Site Map</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="search-result.html">Search Results</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="get-in-touch.html">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-md-3">
+                                            <p>Post layouts & formats</p>
+                                            <ul class="features-dropdown">
+                                                <li class="divider"></li>
+                                                <li><a href="default-single-post.html">Default Single Post</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="full-width-post.html">Full Width Post</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="gallery-format-post.html">Gallery Format</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="video-format-post.html">Video Format</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="audio-format-post.html">Audio Format</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="comment-example.html">Comment Example</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- Dropdown menu end -->
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Navigation end -->
+                </div>
+            </header>
+            <!-- Header block end-->
+            <section id="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<asp:SiteMapPath runat="server" PathDirection="RootToCurrent" PathSeparator="     >    " RenderCurrentNodeAsLink="False" CssClass="breadcrumb" ></asp:SiteMapPath>
+				</div>
+			</div>
+		</div>
+	</section>
+
+            <asp:ContentPlaceHolder ID="cpMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+<%--    <script src="../Scripts/jquery-2.1.1.js"></script>--%>
+    <script src="../Scripts/jquery.lightbox.min.js"></script>
+    <script src="../Scripts/jquery.placeholder.js"></script>
+    <script src="../Scripts/app.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/owl.carousel.js"></script>
+    <script src="../Scripts/tinynav.min.js"></script>
+    <script src="../Scripts/Zee.js"></script>
+    <script type="text/javascript">
+
+        'use strict';
+
+        // Content tabs init
+        $(function () {
+            $('#content-tabs a[href="#tab1"]').tab('show');
+            $('#content-tabs a[href="#tab2"]').tab('show');
+            $('#content-tabs a[href="#tab3"]').tab('show');
+
+            $('#content-tabs a:first').tab('show'); // First tab icon setup
+        });
+
+
+        // Mobile menu init
+        $(function () {
+            $("#nav").tinyNav({
+                header: 'Navigation', // String: Specify text for "header" and show header instead of the active item		  
+            });
+        });
+
+
+        // Mega menu fix  
+        $(document).on('click', '.yamm .dropdown-menu', function (e) {
+            e.stopPropagation();
+        });
+
+
+        // Tooltips init 
+        $(document).ready(function () {
+            $("a").tooltip();
+        });
+    </script>
+</body>
+</html>

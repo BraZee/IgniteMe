@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UserGroupOperationDataSet" targetNamespace="http://thesofttribe.com/platform/sledger/UserGroupOperationDataSet.xsd" xmlns:mstns="http://thesofttribe.com/platform/sledger/UserGroupOperationDataSet.xsd" xmlns="http://thesofttribe.com/platform/sledger/UserGroupOperationDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UserGroupOperationDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="UserGroupOperationDataSet" msprop:Generator_UserDSName="UserGroupOperationDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserGroupOperation" msprop:Generator_UserTableName="UserGroupOperation" msprop:Generator_RowDeletedName="UserGroupOperationRowDeleted" msprop:Generator_TableClassName="UserGroupOperationDataTable" msprop:Generator_RowChangedName="UserGroupOperationRowChanged" msprop:Generator_RowClassName="UserGroupOperationRow" msprop:Generator_RowChangingName="UserGroupOperationRowChanging" msprop:Generator_RowEvArgName="UserGroupOperationRowChangeEvent" msprop:Generator_RowEvHandlerName="UserGroupOperationRowChangeEventHandler" msprop:Generator_TablePropName="UserGroupOperation" msprop:Generator_TableVarName="tableUserGroupOperation" msprop:Generator_RowDeletingName="UserGroupOperationRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperationId" msprop:Generator_UserColumnName="OperationId" msprop:Generator_ColumnPropNameInRow="OperationId" msprop:Generator_ColumnVarNameInTable="columnOperationId" msprop:Generator_ColumnPropNameInTable="OperationIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Operation" msprop:Generator_UserColumnName="Operation" msprop:Generator_ColumnPropNameInRow="Operation" msprop:Generator_ColumnVarNameInTable="columnOperation" msprop:Generator_ColumnPropNameInTable="OperationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UserGroupId" msprop:Generator_UserColumnName="UserGroupId" msprop:Generator_ColumnPropNameInRow="UserGroupId" msprop:Generator_ColumnVarNameInTable="columnUserGroupId" msprop:Generator_ColumnPropNameInTable="UserGroupIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="UserGroup" msprop:Generator_UserColumnName="UserGroup" msprop:Generator_ColumnPropNameInRow="UserGroup" msprop:Generator_ColumnVarNameInTable="columnUserGroup" msprop:Generator_ColumnPropNameInTable="UserGroupColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
